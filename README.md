@@ -1,28 +1,40 @@
-# 🤖 RAGent AI
+# 🤖 RAGent AI — Retrieval-Augmented Multi-Agent Assistant
 
-**RAGent AI** is a next-gen AI chatbot that combines **multi-LLM support**, **retrieval-augmented generation (RAG)**, **agent tools**, **memory**, and **voice input/output** — all in one seamless app.
+![License](https://img.shields.io/badge/license-MIT-blue)
+![Streamlit](https://img.shields.io/badge/built%20with-Streamlit-ff4b4b)
+![LangChain](https://img.shields.io/badge/langchain-powered-yellow)
 
-Built using [LangChain](https://www.langchain.com/), [Streamlit](https://streamlit.io/), and models like **OpenAI**, **HuggingFace**, and **Ollama**.
-
-![RAGent AI Banner](./assets/banner.png)
-
----
-
-## 🧠 Features
-
-- 🧬 **Retrieval-Augmented Generation (RAG)**
-- 🤖 **Switchable LLMs**: OpenAI (GPT-3.5), HuggingFace (T5), and Ollama (Gemma)
-- 📄 **Document Q&A**: Upload PDFs or extract from website URLs
-- 🔎 **Search Modes**:
-  - **Fast**: Direct retrieval
-  - **Smart**: Memory + LLM-powered summarization
-  - **Agent**: Tool-augmented response using Wikipedia, Arxiv, and retriever
-- 🎙️ **Voice Input + Output**
-- 🧠 **Chat Memory** (via `ConversationBufferMemory`)
-- 🗂️ **Feedback Logging**
-- 🎨 Dark UI + Lottie animations
+RAGent AI is a powerful, visually polished chatbot powered by **LangChain**, designed for **RAG (Retrieval-Augmented Generation)** and **Multi-Agent** workflows. With support for **OpenAI**, **HuggingFace**, and **Ollama** LLMs, it's your go-to assistant for document Q&A, semantic search, summarization, and beyond — all with a beautiful Streamlit interface.
 
 ---
 
-## 🏗️ Architecture
+## ✨ Features
 
+| Capability                  | Description                                                                 |
+|----------------------------|-----------------------------------------------------------------------------|
+| 🧠 **Multi-LLM**            | Choose from OpenAI, HuggingFace, or Ollama with live toggle                 |
+| 📎 **RAG-Enabled**          | Retrieval-Augmented Generation from PDF or website                         |
+| 🧠 **Memory Support**       | Uses LangChain memory for contextual follow-up conversations               |
+| 🎤 **Voice I/O**            | Ask questions via microphone, hear answers back (TTS)                      |
+| 🛠️ **Multi-Agent Mode**     | Run Wikipedia, Arxiv & RAG search via LangChain agents                     |
+| ⭐ **Feedback Capture**      | Built-in response rating (👍/👎) for improvement                            |
+| 🌑 **Dark Mode + UI Polish**| Enhanced with tooltips, icons, banners, dark UI, and UX animations         |
+
+---
+
+## 🖼️ UI Snapshot
+
+![UI](docs/screenshot.png) <!-- Add screenshot in /docs or change path -->
+
+---
+
+## 🛠️ Architecture
+
+```mermaid
+flowchart TD
+    UI[Streamlit UI] -->|URL / PDF| Embedder(OpenAIEmbeddings)
+    Embedder --> VectorStore[FAISS VectorStore]
+    UI -->|User Query| RAG[Retrieval Chain / Agent]
+    RAG -->|Result| ChatBox
+    RAG -->|Tools| Wikipedia & Arxiv
+    ChatBox --> Feedback[Rating + Voice Output]
