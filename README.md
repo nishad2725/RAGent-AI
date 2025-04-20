@@ -71,7 +71,9 @@ touch .env
 ## .env sample:
 
 OPENAI_API_KEY="your-openai-key"
+
 HUGGINGFACEHUB_API_TOKEN="your-hf-token"
+
 LANGCHAIN_API_KEY="your-langchain-key"
 
 
