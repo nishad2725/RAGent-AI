@@ -43,7 +43,7 @@ flowchart TD
 ---
 
 
-🔧 Prerequisites
+## 🔧 Prerequisites
 
 Python 3.11+
 OpenAI API Key
@@ -51,7 +51,7 @@ HuggingFace Token
 (Optional) Ollama Installed
 
 
-🧪 Installation
+## 🧪 Installation
 
 git clone https://github.com/nishad2725/RAGent-AI.git
 cd RAGent-AI
@@ -68,17 +68,17 @@ pip install -r requirements.txt
 touch .env
 
 
-.env sample:
+## .env sample:
 
 OPENAI_API_KEY="your-openai-key"
 HUGGINGFACEHUB_API_TOKEN="your-hf-token"
 LANGCHAIN_API_KEY="your-langchain-key"
 
 
-▶️ Run the App
+## ▶️ Run the App
 
 streamlit run chatbot/app.py
 
-🤝 Contributing
+## 🤝 Contributing
 
 Pull requests are welcome! Open issues for feedback or improvements.
