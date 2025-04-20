@@ -24,7 +24,7 @@ RAGent AI is a powerful, visually polished chatbot powered by **LangChain**, des
 
 ## 🖼️ UI Snapshot
 
-![UI](docs/screenshot.png) <!-- Add screenshot in /docs or change path -->
+![UI](UI.png) <!-- Add screenshot in /docs or change path -->
 
 ---
 
