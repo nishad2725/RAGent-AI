@@ -38,3 +38,38 @@ flowchart TD
     RAG -->|Result| ChatBox
     RAG -->|Tools| Wikipedia & Arxiv
     ChatBox --> Feedback[Rating + Voice Output]
+
+
+🔧 Prerequisites
+Python 3.11+
+OpenAI API Key
+HuggingFace Token
+(Optional) Ollama Installed
+
+
+🧪 Installation
+git clone https://github.com/nishad2725/RAGent-AI.git
+cd RAGent-AI
+
+# Create virtual environment
+python3 -m venv .venv
+source .venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Add secrets to .env
+touch .env
+
+
+.env sample:
+OPENAI_API_KEY="your-openai-key"
+HUGGINGFACEHUB_API_TOKEN="your-hf-token"
+LANGCHAIN_API_KEY="your-langchain-key"
+
+
+▶️ Run the App
+streamlit run chatbot/app.py
+
+🤝 Contributing
+Pull requests are welcome! Open issues for feedback or improvements.
