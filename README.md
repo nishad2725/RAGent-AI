@@ -41,6 +41,7 @@ flowchart TD
 
 ---
 
+
 🔧 Prerequisites
 Python 3.11+
 OpenAI API Key
