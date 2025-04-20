@@ -38,6 +38,7 @@ flowchart TD
     RAG -->|Result| ChatBox
     RAG -->|Tools| Wikipedia & Arxiv
     ChatBox --> Feedback[Rating + Voice Output]
+```
 
 ---
 
