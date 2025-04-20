@@ -1,0 +1,27 @@
+# Virtual environments
+.venv/
+.venv311/
+env/
+venv/
+
+# Python build artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+
+# Audio/output/large files
+*.mp3
+*.pdf
+*.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# MacOS
+.DS_Store
+.DS_Store
+.env
+.venv311/
+*.ipynb
